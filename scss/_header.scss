@@ -1,0 +1,89 @@
+//MIXINS
+
+@mixin a($color) {
+    text-decoration: none;
+    color: $color;
+    font-weight: bolder;
+    font-size: 16px;
+}
+
+//HEADER
+
+header {
+    position: fixed;
+    background-color: $colorPrimario;
+    width: 100%;
+    height: 10vh;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    z-index: 10;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.3px solid gray;
+    #logo {
+        width: 3rem;
+        transition: 1s;
+
+    }
+
+    #logo:hover {
+        transform: scale(1.1);
+    }
+
+
+
+    #navHeader {
+        width: 100%;
+        grid-template-columns: repeat(3, auto);
+        justify-content: flex-end;
+        gap: 2rem;
+
+        a {
+            @include a($color: gray);
+        }
+
+        a:hover {
+
+            color: $colorResaltado;
+
+        }
+
+
+    }
+
+    #hamburguesa {
+        color: gray;
+        position: absolute;
+        right: 20px;
+    }
+
+    #hamburguesa:hover {
+        color: $colorResaltado;
+    }
+
+
+}
+
+
+//MEDIA QUERYS
+
+@media (max-width: 800px) {
+    #navHeader {
+        display: none;
+    }
+    
+    
+}
+
+@media (min-width: 800px) {
+    #hamburguesa {
+        display: none;
+    }
+
+    #navHeader {
+        display: grid;
+    }
+    
+}

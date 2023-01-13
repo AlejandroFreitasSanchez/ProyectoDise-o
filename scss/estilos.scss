@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Rubik";
+    scroll-behavior: smooth;
+    
+}
+
+//VARIABLES
+
+$colorResaltado : rgb(255, 255, 255);
+$colorPrimario: rgb(2, 2, 2);
+$colorSecundario: rgb(41, 40, 40);
+$colorDetalles: rgb(255, 204, 0);
+$colorBotones: rgb(100, 98, 98);
+
+//IMPORTS
+
+@import "_header.scss", "main.scss";
+
+
+

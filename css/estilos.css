@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  background-color: rgb(2, 2, 2);
+  width: 100%;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  z-index: 10;
+  padding-left: 20px;
+  padding-right: 20px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 0.3px solid gray;
+}
+header #logo {
+  width: 3rem;
+  transition: 1s;
+}
+header #logo:hover {
+  transform: scale(1.1);
+}
+header #navHeader {
+  width: 100%;
+  grid-template-columns: repeat(3, auto);
+  justify-content: flex-end;
+  gap: 2rem;
+}
+header #navHeader a {
+  text-decoration: none;
+  color: gray;
+  font-weight: bolder;
+  font-size: 16px;
+}
+header #navHeader a:hover {
+  color: rgb(255, 255, 255);
+}
+header #hamburguesa {
+  color: gray;
+  position: absolute;
+  right: 20px;
+}
+header #hamburguesa:hover {
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 800px) {
+  #navHeader {
+    display: none;
+  }
+}
+@media (min-width: 800px) {
+  #hamburguesa {
+    display: none;
+  }
+  #navHeader {
+    display: grid;
+  }
+}
+main {
+  width: 100%;
+  height: auto;
+  background-color: rgb(41, 40, 40);
+}
+main #portada {
+  width: 100%;
+  height: 101vh;
+}
+main #portada video {
+  object-fit: cover;
+  height: 100%;
+  position: absolute;
+  filter: blur(4px) grayscale(0.9);
+  z-index: 1;
+}
+main #portada p {
+  position: absolute;
+  text-align: center;
+  left: 15%;
+  right: 15%;
+  color: white;
+  font-size: 2.2rem;
+  font-weight: bolder;
+  z-index: 2;
+}
+main #discografia {
+  width: 100%;
+  height: auto;
+}
+main #discografia #tituloDiscografia {
+  padding: 20px;
+  height: 15vh;
+  text-align: center;
+  color: rgb(255, 204, 0);
+}
+main #discografia #generos {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+main #discografia #generos a {
+  text-decoration: none;
+  color: rgb(255, 253, 253);
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 10px;
+  background-color: rgb(100, 98, 98);
+  border-radius: 5px;
+}
+main #discografia #generos a:hover {
+  background-color: #7e7b7b;
+}
+main #discografia #vinilos {
+  margin-top: 10vh;
+  width: 100%;
+  height: auto;
+  justify-content: flex-start;
+  display: grid;
+  grid-auto-rows: 15rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  background-color: #363535;
+}
+main #discografia #vinilos img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+main #discografia #vinilos a {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+}
+main #discografia #vinilos a:hover {
+  filter: opacity(0.2) grayscale(1);
+}
+
+@media (max-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+  #portada video {
+    width: 100%;
+    margin-left: 0;
+  }
+  #portada p {
+    top: 40%;
+  }
+}
+@media (min-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+  #portada {
+    background-color: rgb(2, 2, 2);
+  }
+  #portada video {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #portada p {
+    top: 50%;
+  }
+}/*# sourceMappingURL=estilos.css.map */
