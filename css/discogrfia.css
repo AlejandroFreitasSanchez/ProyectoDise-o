@@ -151,7 +151,7 @@ header {
   position: fixed;
   background-color: rgb(2, 2, 2);
   width: 100%;
-  height: 10vh;
+  height: 11vh;
   display: grid;
   grid-template-columns: repeat(2, 50%);
   z-index: 10;
@@ -462,6 +462,10 @@ main #discografia #busqueda #barraBusqueda {
   width: 50%;
   height: 40px;
   border-radius: 10px;
+  transition: 0.5s;
+}
+main #discografia #busqueda #barraBusqueda:hover {
+  scale: 110%;
 }
 main #discografia #rock, main #discografia #blues, main #discografia #punk, main #discografia #pop, main #discografia #soul, main #discografia #jazz, main #discografia #gospel {
   background-color: rgb(2, 2, 2);

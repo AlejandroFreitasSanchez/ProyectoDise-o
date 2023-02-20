@@ -6,7 +6,7 @@ main {
     height: auto;
     background-color: $colorSecundario;
 
-
+    
 
     #discografia {
         width: 100%;
@@ -54,6 +54,10 @@ main {
                 width: 50%;
                 height: 40px;
                 border-radius: 10px;
+                transition: 0.5s;
+                &:hover{
+                    scale: 110%;
+                }
             }
         }
 
