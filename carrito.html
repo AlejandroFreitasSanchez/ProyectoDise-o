@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/carrito.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>ARecords</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="img/logo.png">
+
+        <nav id="navHeader">
+            <a href="index.html">Inicio</a>
+            <a href="discografia.html">Discografia</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
+        </nav>
+
+        <div id="hamburguesa">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Inicio</a></li>
+                <li><a class="menu__item" href="discografia.html">Discografia</a></li>
+                <li><a class="menu__item" href="index.html">Contacto</a></li>
+                <li><a class="menu__item" href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                
+            </ul>
+        </div>
+
+    </header>
+
+    <main>
+        <div id="espaciado"></div>
+        <h1>Su cesta de compras</h1>
+        <div id="carrito">
+            
+            <div id="productos">
+                <div>
+                    <a href="vinilos/abbeyRoad.html"><img src="img/portadasVinilos/abbey-road-the-beatles-1969.png"></a>
+                    <span>Precio unidad: 23$</span>
+                    <span>Cantidad: 1</span>
+                    <a href="#" id="eliminar"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                </div>
+                <div>
+                    <a href="vinilos/aladdinSane.html"><img src="img/portadasVinilos/aladdin-sane-david-bowie-1973.png"></a>
+                    <span>Precio unidad: 17$</span>
+                    <span>Cantidad: 1</span>
+                    <a href="#" id="eliminar"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                </div>
+                <div>
+                    <a href="vinilos/americanIdiot.html"><img src="img/portadasVinilos/american-idiot-green-day-2004.png"></a>
+                    <span>Precio unidad: 25$</span>
+                    <span>Cantidad: 2</span>
+                    <a href="#" id="eliminar"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                </div>
+                <div>
+                    <a href="vinilos/Goo.html"><img src="img/portadasVinilos/sonicYouth_LP.png"></a>
+                    <span>Precio unidad: 20$</span>
+                    <span>Cantidad: 3</span>
+                    <a href="#" id="eliminar"><i class="fa-sharp fa-solid fa-trash"></i></a>
+                </div>
+            </div>
+            <div id="finalizarCompra">
+                <div id="continuar">
+                    <div>
+                        <h2>Total <b>150$</b></h2>
+                        <p>Todos los precios incluyen iva.</p><br><br>
+                        <a href="finalizarCompra.html" id="continuarBoton">Ir a caja</a>
+                    </div>
+                </div>
+                <div id="llegada">
+                    <p>Previsión de envío, <b>3 días</b></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="copyright">
+            <small><small>© Copyright 2023 ARecords. All right reserved. | Privacy Policy | Terms of Use</small></small>
+        </div>
+        <div id="socialMedia">
+            <a href="#"><i class="fa-brands  fa-2x fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-2x fa-square-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands  fa-2x fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-square-envelope fa-2x"></i></a>
+        </div>
+
+    </footer>
+</body>
+
+</html>

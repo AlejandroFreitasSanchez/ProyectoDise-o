@@ -1,0 +1,108 @@
+@import "_mixins.scss", "_variables.scss", "mediaQuerys";
+//MAIN
+
+main {
+    padding: 50px;
+    width: 100%;
+    min-height: 85vh;
+    background-color: $colorSecundario;
+
+    #espaciado {
+        height: 10vh;
+    }
+
+    h1 {
+        padding-top: 20px;
+        padding-bottom: 40px;
+        color: $colorDetalles;
+    }
+
+    #carrito {
+        width: 100%;
+        height: auto;
+        display: grid;
+      
+        justify-items: center;
+
+        #productos {
+            width: 100%;
+            height: auto;
+            display: grid;
+            grid-template-columns: repeat(1, 100%);
+            gap: 20px;
+
+            div {
+                display: grid;
+                grid-template-columns: repeat(4, 20%);
+                align-items: center;
+                gap: 20px;
+                border-bottom: 2px solid $colorBotones;
+
+                a {
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                span {
+                    font-size: 18px;
+                }
+
+                #eliminar {
+
+                    width: 35px;
+                    padding: 10px;
+                    background-color: $colorBotones;
+                    border-radius: 5px;
+                    color: $colorResaltado;
+                    transition: 0.5s;
+
+                    &:hover {
+                        scale: 120%;
+                    }
+                }
+
+                span {
+                    color: $colorResaltado;
+                }
+            }
+        }
+
+        #finalizarCompra {
+            padding: 20px;
+            width: 90%;
+
+
+            #continuar {
+               // height: 30%;
+                background-color: $colorBotones;
+                border-radius: 20px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+                text-align: center;
+                div{
+                    #continuarBoton {
+                        @include a($color: $colorPrimario);
+                        padding: 10px;
+                        background-color: $colorDetalles;
+                        border-radius: 5px;
+                    }
+                }
+                
+            }
+
+            #llegada {
+                //height: 20%;
+                margin-top: 20px;
+                border-radius: 20px;
+                border: 1px solid $colorDetalles;
+                color: $colorDetalles;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
+        }
+    }
+}

@@ -1,0 +1,222 @@
+//MEDIA QUERYS
+//formulario
+@media (max-width: 1100px) {
+    #formulario {
+        form {
+            #email {
+                width: 100%;
+            }
+
+            #telefono {
+                width: 100%;
+                margin-top: 20px;
+            }
+
+        }
+    }
+    #formularioCompra {
+        form {
+            #email {
+                width: 100%;
+            }
+
+            #telefono {
+                width: 100%;
+                margin-top: 20px;
+            }
+            #calle{
+                width: 100%;
+            }
+            #CP{
+                width: 100%;
+            }
+            #localidad{
+                width: 100%;
+                margin-top: 20px;
+            }
+            #numeroTarjeta{
+                width: 100%;
+            }
+            #mes{
+                width: 100%;
+            }
+            #año{
+                width: 100%;
+                margin-top: 20px;
+            }
+            #titular{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #formulario {
+        form {
+            h1 {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media (min-width: 1100px) {
+    #formulario {
+        form {
+            #email {
+                width: 70%;
+            }
+
+            #telefono {
+                width: 29.5%;
+
+            }
+
+        }
+    }
+    #formularioCompra {
+        form {
+            #email {
+                width: 70%;
+            }
+
+            #telefono {
+                width: 29.5%;
+
+            }
+            #calle{
+                width: 100%;
+            }
+            #CP{
+                width: 29.5%;
+            }
+            #localidad{
+                width: 70%;
+            }
+            #numeroTarjeta{
+                width: 100%;
+            }
+            #mes{
+                width: 50%;
+            }
+            #año{
+                width: 49.5%;
+            }
+            #titular{
+                width: 100%;
+            }
+        }
+    }
+
+    #carrito {
+        grid-template-columns: repeat(2, 50%);
+
+        #finalizarCompra {
+            #continuar {
+                height: 30%;
+            }
+
+            #llegada {
+                height: 20%;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #carrito {
+        #finalizarCompra {
+            #continuar {
+                height: 20vh;
+            }
+
+            #llegada {
+                height: 10vh;
+            }
+        }
+    }
+}
+
+//comunes
+@media (max-width: 800px) {
+    #generos {
+        grid-template-columns: repeat(1, 40%);
+    }
+
+    #portada {
+        video {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        p {
+            top: 40%;
+        }
+    }
+
+    #informacion {
+        gap: 20px;
+        grid-template-columns: repeat(1, 100%);
+    }
+
+
+    #navHeader {
+        display: none;
+    }
+
+    #hamburguesa {
+        display: flex;
+    }
+
+    #generos {
+        grid-template-columns: repeat(1, 40%);
+    }
+
+
+
+
+}
+
+@media (min-width: 800px) {
+    #hamburguesa {
+        display: none;
+    }
+
+    #navHeader {
+        display: grid;
+    }
+
+    #generos {
+        grid-template-columns: repeat(7, auto);
+
+
+    }
+
+
+    #portada {
+        background-color: $colorPrimario;
+
+        video {
+            width: 80%;
+            margin-left: 10%;
+        }
+
+        p {
+            top: 50%;
+        }
+    }
+
+    #informacion {
+        grid-template-columns: 40% 70%;
+    }
+
+
+    #generos {
+        grid-template-columns: repeat(7, auto);
+
+
+    }
+
+}

@@ -1,11 +1,152 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Rubik";
-  scroll-behavior: smooth;
+@charset "UTF-8";
+@media (max-width: 1100px) {
+  #formulario form #email {
+    width: 100%;
+  }
+  #formulario form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #email {
+    width: 100%;
+  }
+  #formularioCompra form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 100%;
+  }
+  #formularioCompra form #localidad {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 100%;
+  }
+  #formularioCompra form #año {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
 }
-
+@media (max-width: 600px) {
+  #formulario form h1 {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  #formulario form #email {
+    width: 70%;
+  }
+  #formulario form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #email {
+    width: 70%;
+  }
+  #formularioCompra form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 29.5%;
+  }
+  #formularioCompra form #localidad {
+    width: 70%;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 50%;
+  }
+  #formularioCompra form #año {
+    width: 49.5%;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+  #carrito {
+    grid-template-columns: repeat(2, 50%);
+  }
+  #carrito #finalizarCompra #continuar {
+    height: 30%;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  #carrito #finalizarCompra #continuar {
+    height: 20vh;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 10vh;
+  }
+}
+@media (max-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+  #portada video {
+    width: 100%;
+    margin-left: 0;
+  }
+  #portada p {
+    top: 40%;
+  }
+  #informacion {
+    gap: 20px;
+    grid-template-columns: repeat(1, 100%);
+  }
+  #navHeader {
+    display: none;
+  }
+  #hamburguesa {
+    display: flex;
+  }
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+}
+@media (min-width: 800px) {
+  #hamburguesa {
+    display: none;
+  }
+  #navHeader {
+    display: grid;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+  #portada {
+    background-color: rgb(2, 2, 2);
+  }
+  #portada video {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #portada p {
+    top: 50%;
+  }
+  #informacion {
+    grid-template-columns: 40% 70%;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+}
 header {
   position: fixed;
   background-color: rgb(2, 2, 2);
@@ -29,31 +170,213 @@ header #logo:hover {
 }
 header #navHeader {
   width: 100%;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(4, auto);
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1px;
 }
 header #navHeader a {
   text-decoration: none;
   color: gray;
   font-weight: bolder;
   font-size: 16px;
+  padding: 26px;
+  border-bottom: 2px solid rgb(0, 0, 0);
 }
 header #navHeader a:hover {
   color: rgb(255, 255, 255);
+  border-color: white;
 }
-header #hamburguesa {
-  color: gray;
-  position: absolute;
+header #hamburguesa #menu__toggle {
+  visibility: hidden;
+}
+header #hamburguesa #menu__toggle:checked + .menu__btn > span {
+  transform: rotate(45deg);
+}
+header #hamburguesa #menu__toggle:checked + .menu__btn > span::before {
+  top: 0;
+  transform: rotate(0deg);
+}
+header #hamburguesa #menu__toggle:checked + .menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+header #hamburguesa #menu__toggle:checked ~ .menu__box {
+  left: 0;
+}
+header #hamburguesa .menu__btn {
+  position: fixed;
+  top: 30px;
   right: 20px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
 }
-header #hamburguesa:hover {
+header #hamburguesa .menu__btn > span,
+header #hamburguesa .menu__btn > span::before,
+header #hamburguesa .menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(255, 255, 255);
+  transition-duration: 0.25s;
+}
+header #hamburguesa .menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+header #hamburguesa .menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+header #hamburguesa .menu__box {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: rgb(2, 2, 2);
+  transition-duration: 0.25s;
+}
+header #hamburguesa .menu__item {
+  display: block;
+  padding: 12px 24px;
+  color: rgb(100, 98, 98);
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: 0.25s;
+}
+header #hamburguesa .menu__item:hover {
+  background-color: rgb(41, 40, 40);
   color: rgb(255, 255, 255);
 }
 
+@media (max-width: 1100px) {
+  #formulario form #email {
+    width: 100%;
+  }
+  #formulario form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #email {
+    width: 100%;
+  }
+  #formularioCompra form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 100%;
+  }
+  #formularioCompra form #localidad {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 100%;
+  }
+  #formularioCompra form #año {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #formulario form h1 {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  #formulario form #email {
+    width: 70%;
+  }
+  #formulario form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #email {
+    width: 70%;
+  }
+  #formularioCompra form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 29.5%;
+  }
+  #formularioCompra form #localidad {
+    width: 70%;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 50%;
+  }
+  #formularioCompra form #año {
+    width: 49.5%;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+  #carrito {
+    grid-template-columns: repeat(2, 50%);
+  }
+  #carrito #finalizarCompra #continuar {
+    height: 30%;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  #carrito #finalizarCompra #continuar {
+    height: 20vh;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 10vh;
+  }
+}
 @media (max-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+  #portada video {
+    width: 100%;
+    margin-left: 0;
+  }
+  #portada p {
+    top: 40%;
+  }
+  #informacion {
+    gap: 20px;
+    grid-template-columns: repeat(1, 100%);
+  }
   #navHeader {
     display: none;
+  }
+  #hamburguesa {
+    display: flex;
+  }
+  #generos {
+    grid-template-columns: repeat(1, 40%);
   }
 }
 @media (min-width: 800px) {
@@ -62,6 +385,25 @@ header #hamburguesa:hover {
   }
   #navHeader {
     display: grid;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+  #portada {
+    background-color: rgb(2, 2, 2);
+  }
+  #portada video {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #portada p {
+    top: 50%;
+  }
+  #informacion {
+    grid-template-columns: 40% 70%;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
   }
 }
 main {
@@ -97,20 +439,385 @@ main #informacion #caracteristicas .subtitulo1 {
 main #informacion #caracteristicas .subtitulo2 {
   font-size: 14px;
 }
+main #informacion #caracteristicas #comprar {
+  text-decoration: none;
+  color: rgb(255, 253, 253);
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 20px;
+  transition: 0.5s;
+  padding: 10px;
+  background-color: rgb(100, 98, 98);
+  border-radius: 5px;
+}
+main #informacion #caracteristicas #comprar:hover {
+  padding: 15px;
+}
+main #informacion #caracteristicas #comprar:hover {
+  background-color: #7e7b7b;
+}
+main #informacion #caracteristicas #favorito {
+  margin-left: 5px;
+  text-decoration: none;
+  color: rgb(255, 253, 253);
+  font-weight: bolder;
+  font-size: 16px;
+  padding: 20px;
+  transition: 0.5s;
+  padding: 10px;
+  background-color: rgb(100, 98, 98);
+  border-radius: 5px;
+}
+main #informacion #caracteristicas #favorito:hover {
+  padding: 15px;
+}
+main #informacion #caracteristicas #favorito:hover {
+  background-color: #7e7b7b;
+}
+main #informacion #caracteristicas #favorito:visited {
+  color: rgb(255, 204, 0);
+}
 
+@media (max-width: 1100px) {
+  #formulario form #email {
+    width: 100%;
+  }
+  #formulario form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #email {
+    width: 100%;
+  }
+  #formularioCompra form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 100%;
+  }
+  #formularioCompra form #localidad {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 100%;
+  }
+  #formularioCompra form #año {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #formulario form h1 {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  #formulario form #email {
+    width: 70%;
+  }
+  #formulario form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #email {
+    width: 70%;
+  }
+  #formularioCompra form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 29.5%;
+  }
+  #formularioCompra form #localidad {
+    width: 70%;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 50%;
+  }
+  #formularioCompra form #año {
+    width: 49.5%;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+  #carrito {
+    grid-template-columns: repeat(2, 50%);
+  }
+  #carrito #finalizarCompra #continuar {
+    height: 30%;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  #carrito #finalizarCompra #continuar {
+    height: 20vh;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 10vh;
+  }
+}
 @media (max-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+  #portada video {
+    width: 100%;
+    margin-left: 0;
+  }
+  #portada p {
+    top: 40%;
+  }
   #informacion {
     gap: 20px;
     grid-template-columns: repeat(1, 100%);
   }
+  #navHeader {
+    display: none;
+  }
+  #hamburguesa {
+    display: flex;
+  }
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
 }
 @media (min-width: 800px) {
+  #hamburguesa {
+    display: none;
+  }
+  #navHeader {
+    display: grid;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+  #portada {
+    background-color: rgb(2, 2, 2);
+  }
+  #portada video {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #portada p {
+    top: 50%;
+  }
   #informacion {
     grid-template-columns: 40% 70%;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
   }
 }
 footer {
   width: 100%;
   height: 15vh;
   background-color: rgb(2, 2, 2);
+}
+footer #copyright {
+  padding-top: 20px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+footer #socialMedia {
+  padding: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  background-color: black;
+}
+footer #socialMedia i {
+  color: rgb(255, 204, 0);
+  transition: 1s;
+}
+footer #socialMedia i:hover {
+  scale: 120%;
+}
+
+@media (max-width: 1100px) {
+  #formulario form #email {
+    width: 100%;
+  }
+  #formulario form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #email {
+    width: 100%;
+  }
+  #formularioCompra form #telefono {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 100%;
+  }
+  #formularioCompra form #localidad {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 100%;
+  }
+  #formularioCompra form #año {
+    width: 100%;
+    margin-top: 20px;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+}
+@media (max-width: 600px) {
+  #formulario form h1 {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  #formulario form #email {
+    width: 70%;
+  }
+  #formulario form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #email {
+    width: 70%;
+  }
+  #formularioCompra form #telefono {
+    width: 29.5%;
+  }
+  #formularioCompra form #calle {
+    width: 100%;
+  }
+  #formularioCompra form #CP {
+    width: 29.5%;
+  }
+  #formularioCompra form #localidad {
+    width: 70%;
+  }
+  #formularioCompra form #numeroTarjeta {
+    width: 100%;
+  }
+  #formularioCompra form #mes {
+    width: 50%;
+  }
+  #formularioCompra form #año {
+    width: 49.5%;
+  }
+  #formularioCompra form #titular {
+    width: 100%;
+  }
+  #carrito {
+    grid-template-columns: repeat(2, 50%);
+  }
+  #carrito #finalizarCompra #continuar {
+    height: 30%;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  #carrito #finalizarCompra #continuar {
+    height: 20vh;
+  }
+  #carrito #finalizarCompra #llegada {
+    height: 10vh;
+  }
+}
+@media (max-width: 800px) {
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+  #portada video {
+    width: 100%;
+    margin-left: 0;
+  }
+  #portada p {
+    top: 40%;
+  }
+  #informacion {
+    gap: 20px;
+    grid-template-columns: repeat(1, 100%);
+  }
+  #navHeader {
+    display: none;
+  }
+  #hamburguesa {
+    display: flex;
+  }
+  #generos {
+    grid-template-columns: repeat(1, 40%);
+  }
+}
+@media (min-width: 800px) {
+  #hamburguesa {
+    display: none;
+  }
+  #navHeader {
+    display: grid;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+  #portada {
+    background-color: rgb(2, 2, 2);
+  }
+  #portada video {
+    width: 80%;
+    margin-left: 10%;
+  }
+  #portada p {
+    top: 50%;
+  }
+  #informacion {
+    grid-template-columns: 40% 70%;
+  }
+  #generos {
+    grid-template-columns: repeat(7, auto);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik";
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: darkgray;
 }/*# sourceMappingURL=card.css.map */

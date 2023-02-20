@@ -1,3 +1,4 @@
+@import "_mixins.scss", "_variables.scss", "mediaQuerys";
 //MAIN
 
 main {
@@ -30,38 +31,55 @@ main {
         }
     }
 
-    #discografia {
+    #bestSellers {
         width: 100%;
         height: auto;
 
-        #tituloDiscografia {
-            padding: 20px;
+        #titulo {
+            padding-top: 80px;
+           
             height: 15vh;
             text-align: center;
             color: $colorDetalles;
         }
 
-        #generos {
+        #vinilosBestSellers {
+            margin-top: 10vh;
             width: 100%;
+            height: auto;
+            justify-content: flex-start;
             display: grid;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 5px;
+            grid-auto-rows: 15rem;
+            grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+            background-color: lighten($colorSecundario, $amount: 5);
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
 
             a {
-                @include a($color: rgb(255, 253, 253));
-                padding: 10px;
-                background-color: $colorBotones;
-                border-radius: 5px;
+                width: 100%;
+                height: 100%;
+                transition: 0.4s;
             }
-
+            
             a:hover {
-                background-color: lighten($colorBotones, $amount: 10);
+                filter: opacity(0.2) grayscale(1);
             }
-        }
 
-        #vinilos {
+        }
+    }
+    #news{
+        #titulo {
+            padding-top: 80px;
+           
+            height: 15vh;
+            text-align: center;
+            color: $colorDetalles;
+        }
+        #vinilosNews{
             margin-top: 10vh;
             width: 100%;
             height: auto;
@@ -76,12 +94,7 @@ main {
                 height: 100%;
                 object-fit: cover;
 
-
-
             }
-
-
-
 
             a {
                 width: 100%;
@@ -93,52 +106,7 @@ main {
                 filter: opacity(0.2) grayscale(1);
             }
 
-            
-
         }
     }
 }
 
-
-//MEDIA QUERYS
-
-@media (max-width: 800px) {
-    #generos {
-        grid-template-columns: repeat(1, 40%);
-    }
-
-    #portada {
-        video {
-            width: 100%;
-            margin-left: 0;
-        }
-
-        p {
-            top: 40%;
-        }
-    }
-
-
-}
-
-@media (min-width: 800px) {
-    #generos {
-        grid-template-columns: repeat(7, auto);
-
-
-    }
-
-    #portada {
-        background-color: $colorPrimario;
-
-        video {
-            width: 80%;
-            margin-left: 10%;
-        }
-
-        p {
-            top: 50%;
-        }
-    }
-
-}

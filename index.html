@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="./fontawesome-free-6.2.1-web/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="img/logo.png">
-    <title>Vinyl</title>
+    <title>ARecords</title>
 </head>
 
 <body>
@@ -19,11 +19,25 @@
 
         <nav id="navHeader">
             <a href="index.html">Inicio</a>
-            <a href="index.html?#discografia">Discografia</a>
-            <a href="#">Contacto</a>
+            <a href="discografia.html">Discografia</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a>
         </nav>
 
-        <a href="" id="hamburguesa"><i class="fa fa-solid fa-2x fa-bars"></i></a>
+        <div id="hamburguesa">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+                <span></span>
+            </label>
+
+            <ul class="menu__box">
+                <li><a class="menu__item" href="index.html">Inicio</a></li>
+                <li><a class="menu__item" href="discografia.html">Discografia</a></li>
+                <li><a class="menu__item" href="index.html">Contacto</a></li>
+                <li><a class="menu__item" href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
+
+            </ul>
+        </div>
 
     </header>
 
@@ -32,52 +46,64 @@
         <div id="portada">
             <video playsinline autoplay muted loop poster="img/portada.mp4">
                 <source src="img/portada.mp4" type="video/mp4">
-                
+
             </video>
             <p>"Living is easy with eyes closed. Misunderstanding all you see"</p>
         </div>
 
-        <div id="discografia">
+        <div id="bestSellers">
 
-            <div id="tituloDiscografia">
-                <h1>DISCOGRAFÍA</h1>
+            <div id="titulo">
+                <h1>Discos más vendidos</h1>
             </div>
 
-            <div id="generos">
-                <a href="#vinilos">Rock</a>
-                <a href="#vinilos">Blues</a>
-                <a href="#vinilos">Punk</a>
-                <a href="#vinilos">Pop</a>
-                <a href="#vinilos">Jazz</a>
-                <a href="#vinilos">Gospel</a>
-                <a href="#vinilos">Soul</a>
+            <div id="vinilosBestSellers">
+                <a href="vinilos/uknownPleasures.html"><img src="img/portadasVinilos/unkown-pleasures-joy-division-1979.png" alt=""></a>
+                <a href="vinilos/forThoseAboutTheRock.html"><img src="img/portadasVinilos/ACD_forThoseAboutToRock.png"></a>
+                <a href="vinilos/londonCalling.html"><img src="img/portadasVinilos/london_calling_THeCLash.png"></a>
+                <a href="vinilos/Goo.html"><img src="img/portadasVinilos/sonicYouth_LP.png"></a>
+                <a href="vinilos/someGirls.html"><img src="img/portadasVinilos/the-rolling-stones-some-girls.png"></a>
+                <a href="vinilos/kissMeKissMe.html"><img src="img/portadasVinilos/the-cure-kiss-me-kiss-me-kiss-me-516x513.png"></a>
+                <a href="vinilos/bigBlackSongs.html"><img src="img/portadasVinilos/bigBlackSongsAbutFucking.png" alt=""></a>
+                <a href="vinilos/inUtero.html"><img src="img/portadasVinilos/inUteroNirvana.png" alt=""></a>
+                <a href="vinilos/instrospective.html"><img src="img/portadasVinilos/introspective.png" alt=""></a>
+                <a href="vinilos/NeverMindTheBollocks.html"><img src="img/portadasVinilos/NeverMindTheBollocs.png" alt=""></a>
+                <a href="vinilos/inTheCourt.html"><img src="img/portadasVinilos/inTheCourtOfTheCrimsonKing.png" alt=""></a>
+                <a class="pop" href="vinilos/tragicKingdom.html"><img
+                    src="img/portadasVinilos/tragic-kingdom-no-doubt-1995.png" alt=""></a>
             </div>
-
-            <div id="vinilos">
-                <a href="vinilos/abbeyRoad.html"><img src="img/portadasVinilos/abbey-road-the-beatles-1969.png" alt=""></a>
-                <a href="vinilos/aladdinSane.html"><img src="img/portadasVinilos/aladdin-sane-david-bowie-1973.png" alt=""></a>
-                <a href="vinilos/americanIdiot.html"><img src="img/portadasVinilos/american-idiot-green-day-2004.png" alt=""></a>
-                <a href="vinilos/backInBlack.html"><img src="img/portadasVinilos/back-in-black-ac-dc-1980.png" alt=""></a>
-                <a href="vinilos/bornIntTheUsa.html"><img src="img/portadasVinilos/born-in-the-u.s.a.-bruce-sprinsteen-1984.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/is-this-it-the-strokes-2001.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/live-after-death-iron-maiden-1985.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/nevermind-nirvana-1991.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/power-corruption-lies-new-order-1983.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/slave-to-the-rhythm-grace-jones-1985.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/the-dark-side-of-the-moon-pink-floyd-1973.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/the-velvet-underground-nico-the-velvet-underground-1967.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/tragic-kingdom-no-doubt-1995.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/unkown-pleasures-joy-division-1979.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/ACD_forThoseAboutToRock.png"></a>
-                <a href="#"><img src="img/portadasVinilos/london_calling_THeCLash.png"></a>
-                <a href="#"><img src="img/portadasVinilos/sonicYouth_LP.png"></a>
-                <a href="#"><img src="img/portadasVinilos/the-rolling-stones-some-girls.png"></a>
-                <a href="#"><img src="img/portadasVinilos/the-cure-kiss-me-kiss-me-kiss-me-516x513.png"></a>
-                <a href="#"><img src="img/portadasVinilos/bigBlackSongsAbutFucking.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/inUteroNirvana.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/introspective.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/NeverMindTheBollocs.png" alt=""></a>
-                <a href="#"><img src="img/portadasVinilos/inTheCourtOfTheCrimsonKing.png" alt=""></a>
+        </div>
+        <div id="news">
+            <div id="titulo">
+                <h1>Novedades</h1>
+            </div>
+            <div id="vinilosNews">
+                <a class="rock" href="vinilos/abbeyRoad.html"><img
+                    src="img/portadasVinilos/abbey-road-the-beatles-1969.png" alt=""></a>
+            <a class="rock" href="vinilos/aladdinSane.html"><img
+                    src="img/portadasVinilos/aladdin-sane-david-bowie-1973.png" alt=""></a>
+            <a class="gospel" href="vinilos/americanIdiot.html"><img
+                    src="img/portadasVinilos/american-idiot-green-day-2004.png" alt=""></a>
+            <a class="gospel" href="vinilos/backInBlack.html"><img
+                    src="img/portadasVinilos/back-in-black-ac-dc-1980.png" alt=""></a>
+            <a class="gospel" href="vinilos/bornIntTheUsa.html"><img
+                    src="img/portadasVinilos/born-in-the-u.s.a.-bruce-sprinsteen-1984.png" alt=""></a>
+            <a class="gospel" href="vinilos/thesStrokes.html"><img
+                    src="img/portadasVinilos/is-this-it-the-strokes-2001.png" alt=""></a>
+            <a class="soul" href="vinilos/liveAfterDeath.html"><img
+                    src="img/portadasVinilos/live-after-death-iron-maiden-1985.png" alt=""></a>
+            <a class="soul" href="vinilos/nervermind.html"><img src="img/portadasVinilos/nevermind-nirvana-1991.png"
+                    alt=""></a>
+            <a class="soul" href="vinilos/powerCorruptionLiesNewOrder.html"><img
+                    src="img/portadasVinilos/power-corruption-lies-new-order-1983.png" alt=""></a>
+            <a class="jazz" href="vinilos/SlaveToTheRithm.html"><img
+                    src="img/portadasVinilos/slave-to-the-rhythm-grace-jones-1985.png" alt=""></a>
+            <a class="jazz" href="vinilos/theDarkSideOfTheMoon.html"><img
+                    src="img/portadasVinilos/the-dark-side-of-the-moon-pink-floyd-1973.png" alt=""></a>
+            <a class="jazz" href="vinilos/theVelvet.html"><img
+                    src="img/portadasVinilos/the-velvet-underground-nico-the-velvet-underground-1967.png"
+                    salt=""></a>
+            
             </div>
         </div>
 
@@ -85,7 +111,16 @@
 
 
     <footer>
-        fooooooooooter
+        <div id="copyright">
+            <small><small>© Copyright 2023 ARecords. All right reserved. | Privacy Policy | Terms of Use</small></small>
+        </div>
+        <div id="socialMedia">
+            <a href="#"><i class="fa-brands  fa-2x fa-square-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-2x fa-square-instagram"></i></i></a>
+            <a href="#"><i class="fa-brands  fa-2x fa-square-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-square-envelope fa-2x"></i></a>
+        </div>
+      
     </footer>
 </body>
 

@@ -1,7 +1,29 @@
+@import "_mixins.scss", "_variables.scss", "_mediaQuerys.scss";
 //FOOTER
 
-footer{
+footer {
     width: 100%;
     height: 15vh;
     background-color: $colorPrimario;
+
+    #copyright {
+        padding-top: 20px;
+        color: $colorResaltado;
+        text-align: center;
+    }
+    #socialMedia{
+        padding: 20px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        text-align: center;
+        i{
+            color: $colorDetalles;
+            transition: 1s;
+        }
+        background-color: black;
+        i:hover{
+            scale: 120%;
+        }
+    }
 }

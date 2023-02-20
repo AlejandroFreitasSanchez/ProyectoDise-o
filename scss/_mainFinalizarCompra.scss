@@ -1,0 +1,90 @@
+@import "_mixins.scss", "_variables.scss", "mediaQuerys";
+
+//MAIN
+main {
+    width: 100%;
+    height: auto;
+    background-color: $colorSecundario;
+    position: relative;
+
+    #espaciado {
+        height: 10vh;
+    }
+
+    #formularioCompra {
+        padding-top: 2%;
+        padding-bottom: 5%;
+        height: auto;
+        width: 100%;
+        #info{
+            h1{
+                color: $colorDetalles;
+            }
+            color: $colorResaltado;
+            padding-left: 5%;
+            padding-right: 5%;
+          
+        }
+        form {
+            height: auto;
+            width: 90%;
+            position: relative;
+            top: 5%;
+            left: 5%;
+            background-color: $colorDetalles;
+            border: 1px solid $colorDetalles;
+            border-radius: 20px;
+            padding: 100px;
+            gap: 20px;
+            input{
+                border: 0px solid white;
+                border-radius: 10px;
+                height: 10%;
+                transition: 0.5s;
+                &:focus{
+                    height: 15%;
+                    
+                }
+            }
+            #nombre {
+                padding: 1%;
+                width: 99.9%;
+            }
+            #email {
+                padding: 1%;
+                
+            }
+            #telefono {
+                padding: 1%;
+              
+            }
+            #calle{
+                padding: 1%;
+            }
+            #CP{
+                padding: 1%;
+            }
+            #localidad{
+                padding: 1%;
+            }
+            #numeroTarjeta{
+                padding: 1%;
+            }
+            #mes{
+                padding: 1%;
+            }
+            #año{
+                padding: 1%;
+            }
+            #titular{
+                padding: 1%;
+            }
+            #enviar{
+                @include a($color: rgb(255, 253, 253));
+                padding: 10px;
+                background-color: $colorBotones;
+                border-radius: 5px;
+            }
+        }
+    }
+}
