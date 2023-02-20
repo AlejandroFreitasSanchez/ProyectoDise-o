@@ -451,6 +451,9 @@ main #agradecimiento #info a {
 main #agradecimiento #info a:hover {
   padding: 15px;
 }
+main #agradecimiento #info a:hover {
+  background-color: #cca300;
+}
 main #agradecimiento #info span {
   color: white;
 }

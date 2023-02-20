@@ -486,6 +486,9 @@ main #carrito #finalizarCompra #continuar div #continuarBoton {
 main #carrito #finalizarCompra #continuar div #continuarBoton:hover {
   padding: 15px;
 }
+main #carrito #finalizarCompra #continuar div #continuarBoton:hover {
+  background-color: #cca300;
+}
 main #carrito #finalizarCompra #llegada {
   margin-top: 20px;
   border-radius: 20px;

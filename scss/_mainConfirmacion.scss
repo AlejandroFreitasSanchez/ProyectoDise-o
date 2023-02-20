@@ -41,6 +41,9 @@ main {
                 background-color: $colorDetalles;
                 border-radius: 5px;
 
+                &:hover{
+                    background-color: darken($colorDetalles, $amount: 10);
+                }
             }
             span{
                 color: white;
