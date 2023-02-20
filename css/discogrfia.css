@@ -414,11 +414,16 @@ main {
 main #discografia {
   width: 100%;
   height: auto;
+  text-align: center;
 }
 main #discografia #titulo {
   padding-top: 90px;
   height: 15vh;
   text-align: center;
+  color: rgb(255, 204, 0);
+}
+main #discografia h2 {
+  padding-top: 20px;
   color: rgb(255, 204, 0);
 }
 main #discografia #generos {
@@ -448,9 +453,19 @@ main #discografia #generos a:hover {
 main #discografia #generos a:hover {
   background-color: #7e7b7b;
 }
-main #discografia #vinilos {
+main #discografia #busqueda {
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+main #discografia #busqueda #barraBusqueda {
+  width: 50%;
+  height: 40px;
+  border-radius: 10px;
+}
+main #discografia #rock, main #discografia #blues, main #discografia #punk, main #discografia #pop, main #discografia #soul, main #discografia #jazz, main #discografia #gospel {
   background-color: rgb(2, 2, 2);
-  margin-top: 10vh;
+  margin-top: 5vh;
   width: 100%;
   height: auto;
   justify-content: flex-start;
@@ -459,17 +474,17 @@ main #discografia #vinilos {
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   background-color: #363535;
 }
-main #discografia #vinilos img {
+main #discografia #rock img, main #discografia #blues img, main #discografia #punk img, main #discografia #pop img, main #discografia #soul img, main #discografia #jazz img, main #discografia #gospel img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-main #discografia #vinilos a {
+main #discografia #rock a, main #discografia #blues a, main #discografia #punk a, main #discografia #pop a, main #discografia #soul a, main #discografia #jazz a, main #discografia #gospel a {
   width: 100%;
   height: 100%;
   transition: 0.4s;
 }
-main #discografia #vinilos a:hover {
+main #discografia #rock a:hover, main #discografia #blues a:hover, main #discografia #punk a:hover, main #discografia #pop a:hover, main #discografia #soul a:hover, main #discografia #jazz a:hover, main #discografia #gospel a:hover {
   filter: opacity(0.2) grayscale(1);
 }
 

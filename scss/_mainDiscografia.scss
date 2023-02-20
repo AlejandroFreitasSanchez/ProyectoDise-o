@@ -11,7 +11,7 @@ main {
     #discografia {
         width: 100%;
         height: auto;
-
+        text-align: center;
         #titulo {
             padding-top: 90px;
 
@@ -19,7 +19,10 @@ main {
             text-align: center;
             color: $colorDetalles;
         }
-
+        h2{
+            padding-top: 20px;
+            color: $colorDetalles;
+        }
         #generos {
             padding-top: 50px;
             position: relative;
@@ -43,10 +46,20 @@ main {
             }
            
         }
+        #busqueda{
+            margin-top: 40px;
+            text-align: center;
+            width: 100%;
+            #barraBusqueda{
+                width: 50%;
+                height: 40px;
+                border-radius: 10px;
+            }
+        }
 
-        #vinilos {
+        #rock, #blues, #punk, #pop, #soul, #jazz, #gospel {
             background-color: $colorPrimario;
-            margin-top: 10vh;
+            margin-top: 5vh;
             width: 100%;
             height: auto;
             justify-content: flex-start;

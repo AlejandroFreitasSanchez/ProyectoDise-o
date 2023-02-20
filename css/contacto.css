@@ -431,7 +431,7 @@ main #formulario #info h1 {
   color: rgb(255, 204, 0);
 }
 main #formulario form {
-  height: 80vh;
+  height: auto;
   width: 90%;
   position: relative;
   top: 5%;
@@ -441,6 +441,7 @@ main #formulario form {
   border-radius: 20px;
   padding: 100px;
   gap: 20px;
+  text-align: center;
 }
 main #formulario form input {
   border: 0px solid white;
@@ -486,6 +487,14 @@ main #formulario form #enviar {
 }
 main #formulario form #enviar:hover {
   padding: 15px;
+}
+main #formulario form #horario {
+  margin-top: 20px;
+  padding: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(41, 40, 40);
+  text-align: center;
+  border-radius: 20px;
 }
 
 @media (max-width: 1100px) {
